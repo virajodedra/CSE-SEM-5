@@ -1,0 +1,18 @@
+LAB 1 ALL COMMANDS ::::::::::
+
+
+ipconfig /ifconfigf
+ping
+getmac
+hostname
+systeminfo
+nslookup
+tracert /traceroute
+netstat
+pathping
+arp
+
+
+
+
+::::::::::::::::::::::::::::
