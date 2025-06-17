@@ -1,0 +1,67 @@
+// insertationSortTimeComplexityTest.c
+
+// bubbleSortTimeComplexityTest
+#include<stdio.h>
+#include<stdbool.h>
+#include<time.h>
+
+void bubbleSort(int arr[], int n){
+    for(int i = 1; i < n; i++){
+        int key  = arr[i];
+        int j  = i - 1;
+
+        while(j >= 0 && arr[j] > key){
+            arr[j + 1] = arr[j];
+            j -= 1;
+        }
+
+        arr[j + 1] = key;
+    }
+}
+
+void main(){
+    FILE *file;
+    clock_t start, end;
+    double cpu_time_used;
+    int arr[1000];
+    int n = 1000;
+
+    // Best Case
+    file = fopen("./best_for_1000.txt", "r");
+    for(int i = 0; i < n; i++){
+        fscanf(file, "%d", &arr[i]);
+    }
+    fclose(file);
+    printf("Best Case Scenario :\n");
+    start = clock();
+    bubbleSort(arr, n);
+    end = clock();
+    cpu_time_used = ((double) (end - start))/CLOCKS_PER_SEC;
+    printf("TIME TAKEN TO SORT THE ARRAY IS : %f seconds\n\n", cpu_time_used);
+
+    // Average Case
+    file = fopen("./average_for_1000.txt", "r");
+    for(int i = 0; i < n; i++){
+        fscanf(file, "%d", &arr[i]);
+    }
+    fclose(file);
+    printf("Average Case Scenario :\n");
+    start = clock();
+    bubbleSort(arr, n);
+    end = clock();
+    cpu_time_used = ((double) (end - start))/CLOCKS_PER_SEC;
+    printf("TIME TAKEN TO SORT THE ARRAY IS : %f seconds\n\n", cpu_time_used);
+
+    // Worst Case
+    file = fopen("./worst_for_1000.txt", "r");
+    for(int i = 0; i < n; i++){
+        fscanf(file, "%d", &arr[i]);
+    }
+    fclose(file);
+    printf("Worst Case Scenario :\n");
+    start = clock();
+    bubbleSort(arr, n);
+    end = clock();
+    cpu_time_used = ((double) (end - start))/CLOCKS_PER_SEC;
+    printf("TIME TAKEN TO SORT THE ARRAY IS : %f seconds\n", cpu_time_used);
+}
