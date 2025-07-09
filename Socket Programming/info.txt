@@ -1,1 +1,38 @@
 Socket Programming using the two diffrent methods UDP and the TCP.
+
+
+
+how to run the UDP 
+
+steps for server first :
+firstly get back from the UDP Folder using "cd .."
+then do as below,
+
+
+C:\Users\viraj\Computer Networks\Socket Programming>javac UDP\Server.java
+
+C:\Users\viraj\Computer Networks\Socket Programming>javac UDP.Server
+error: Class names, 'UDP.Server', are only accepted if annotation processing is explicitly requested
+1 error
+
+C:\Users\viraj\Computer Networks\Socket Programming>java UDP.Server
+Client:-hi
+Client:-volt
+Client:-cn UDP demo
+
+
+same for the client :
+
+firstly get back from the UDP Folder using "cd .."
+then do as below,
+
+C:\Users\viraj\Computer Networks\Socket Programming>javac UDP\Client.java
+
+C:\Users\viraj\Computer Networks\Socket Programming>java UDP.Client
+hi
+volt
+cn UDP demo
+
+
+
+that's it. Done !!
