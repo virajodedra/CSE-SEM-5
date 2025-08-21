@@ -67,11 +67,12 @@ public class CostOfAssigningVirtualMachineToTask {
                 }
             }
             
-            vmPower[idx][0] -= currCPU;
-            vmPower[idx][1] -= currMEMORY;
+            
 
             if( idx != -1 ) {
                 System.out.println( " TASK  " + (i + 1) +  " is processed by the virtual machine : "  + ( idx + 1 ) + " .." );
+                vmPower[idx][0] -= currCPU;
+                vmPower[idx][1] -= currMEMORY;
             }
             else{
                 System.out.println( " TASK  " + (i + 1) +  " is not processed by any  virtual machine : " );
@@ -82,3 +83,4 @@ public class CostOfAssigningVirtualMachineToTask {
 
     }    
 }
+
