@@ -1,3 +1,5 @@
+// time complexity = O( V * ( V = E) ) 
+
 import java.util.*;
 public class CutVertex {
     public static void main(String[] args) {
@@ -56,3 +58,4 @@ public class CutVertex {
         }
     }
 }
+
